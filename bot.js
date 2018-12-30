@@ -1,6 +1,6 @@
 const Discord = require ('discord.js');
 const client = new Discord.Client();
-const prefix = "prefix"
+const prefix = "+"
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -9,7 +9,7 @@ client.on('ready', () => {
  
  
 client.on('message', function(message) {
-    const myID = "500351379865468930";
+    const myID = "269360753721475072";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
                 if(message.author.id !== myID) return;
